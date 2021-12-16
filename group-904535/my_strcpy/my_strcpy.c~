@@ -1,0 +1,35 @@
+/*
+** ETNA PROJECT, 20/10/2021 by badaro_a
+** my_strcpy
+** File description:
+**      my_strcpy.c
+*/
+
+
+#include <unistd.h>
+#include <stdio.h>
+void my_putchar(char c)
+{
+    write(1, &c, 1);
+}
+
+char *my_strcpy(char *dest, const char *src)
+{
+    int i= 0;
+    
+    while (src[i])
+{
+    dest[i]=src[i]; i++;
+   
+ }
+    dest[i]='\0';
+    printf("%s\n",dest);
+    return dest;
+}    
+            
+int main ()
+{
+    char dest[]= "hello";
+    char src[]= "bye_bye";
+     my_strcpy(dest,src);
+}
